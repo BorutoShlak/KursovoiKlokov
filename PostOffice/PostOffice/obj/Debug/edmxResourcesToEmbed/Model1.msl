@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище user7_dbModelContainer" CdmEntityContainer="user7_dbEntities1">
+    <EntitySetMapping Name="Pochta_Clients">
+      <EntityTypeMapping TypeName="user7_dbModel.Pochta_Clients">
+        <MappingFragment StoreEntitySet="Pochta_Clients">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pochta_Dolzhonst">
+      <EntityTypeMapping TypeName="user7_dbModel.Pochta_Dolzhonst">
+        <MappingFragment StoreEntitySet="Pochta_Dolzhonst">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pochta_Employees">
+      <EntityTypeMapping TypeName="user7_dbModel.Pochta_Employees">
+        <MappingFragment StoreEntitySet="Pochta_Employees">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+          <ScalarProperty Name="dolzhnost" ColumnName="dolzhnost" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pochta_Role">
+      <EntityTypeMapping TypeName="user7_dbModel.Pochta_Role">
+        <MappingFragment StoreEntitySet="Pochta_Role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pochta_Shipments">
+      <EntityTypeMapping TypeName="user7_dbModel.Pochta_Shipments">
+        <MappingFragment StoreEntitySet="Pochta_Shipments">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="track_number" ColumnName="track_number" />
+          <ScalarProperty Name="tip" ColumnName="tip" />
+          <ScalarProperty Name="fact_weight" ColumnName="fact_weight" />
+          <ScalarProperty Name="sender" ColumnName="sender" />
+          <ScalarProperty Name="receiver" ColumnName="receiver" />
+          <ScalarProperty Name="date_priema" ColumnName="date_priema" />
+          <ScalarProperty Name="tarif" ColumnName="tarif" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="employee" ColumnName="employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pochta_Statuses">
+      <EntityTypeMapping TypeName="user7_dbModel.Pochta_Statuses">
+        <MappingFragment StoreEntitySet="Pochta_Statuses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pochta_StatusHistory">
+      <EntityTypeMapping TypeName="user7_dbModel.Pochta_StatusHistory">
+        <MappingFragment StoreEntitySet="Pochta_StatusHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="shipment" ColumnName="shipment" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="date_of_change" ColumnName="date_of_change" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pochta_Tarrifs">
+      <EntityTypeMapping TypeName="user7_dbModel.Pochta_Tarrifs">
+        <MappingFragment StoreEntitySet="Pochta_Tarrifs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tip" ColumnName="tip" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pochta_Users">
+      <EntityTypeMapping TypeName="user7_dbModel.Pochta_Users">
+        <MappingFragment StoreEntitySet="Pochta_Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="employee" ColumnName="employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

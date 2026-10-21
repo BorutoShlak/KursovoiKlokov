@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище user7_dbModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Pochta_Clients">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="lastname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="patronymic" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar(max)" Nullable="false" />
+          <Property Name="phone" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pochta_Dolzhonst">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pochta_Employees">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="lastname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="patronymic" Type="varchar" MaxLength="50" />
+          <Property Name="dolzhnost" Type="int" Nullable="false" />
+          <Property Name="phone" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pochta_Role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pochta_Shipments">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="track_number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tip" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="fact_weight" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sender" Type="int" Nullable="false" />
+          <Property Name="receiver" Type="int" Nullable="false" />
+          <Property Name="date_priema" Type="date" Nullable="false" />
+          <Property Name="tarif" Type="int" Nullable="false" />
+          <Property Name="cost" Type="money" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="employee" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pochta_Statuses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pochta_StatusHistory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="shipment" Type="int" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="date_of_change" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pochta_Tarrifs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tip" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="weight" Type="int" Nullable="false" />
+          <Property Name="cost" Type="money" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pochta_Users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="login" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="50" />
+          <Property Name="role" Type="int" Nullable="false" />
+          <Property Name="employee" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Pochta_Employees_Pochta_Dolzhonst">
+          <End Role="Pochta_Dolzhonst" Type="Self.Pochta_Dolzhonst" Multiplicity="1" />
+          <End Role="Pochta_Employees" Type="Self.Pochta_Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Dolzhonst">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Employees">
+              <PropertyRef Name="dolzhnost" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Shipments_Pochta_Clients">
+          <End Role="Pochta_Clients" Type="Self.Pochta_Clients" Multiplicity="1" />
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Clients">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Shipments">
+              <PropertyRef Name="sender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Shipments_Pochta_Clients1">
+          <End Role="Pochta_Clients" Type="Self.Pochta_Clients" Multiplicity="1" />
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Clients">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Shipments">
+              <PropertyRef Name="receiver" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Shipments_Pochta_Employees">
+          <End Role="Pochta_Employees" Type="Self.Pochta_Employees" Multiplicity="1" />
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Employees">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Shipments">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Shipments_Pochta_Statuses">
+          <End Role="Pochta_Statuses" Type="Self.Pochta_Statuses" Multiplicity="1" />
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Statuses">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Shipments">
+              <PropertyRef Name="status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Shipments_Pochta_Tarrifs">
+          <End Role="Pochta_Tarrifs" Type="Self.Pochta_Tarrifs" Multiplicity="1" />
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Tarrifs">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Shipments">
+              <PropertyRef Name="tarif" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_StatusHistory_Pochta_Shipments">
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="1" />
+          <End Role="Pochta_StatusHistory" Type="Self.Pochta_StatusHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Shipments">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_StatusHistory">
+              <PropertyRef Name="shipment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_StatusHistory_Pochta_Statuses">
+          <End Role="Pochta_Statuses" Type="Self.Pochta_Statuses" Multiplicity="1" />
+          <End Role="Pochta_StatusHistory" Type="Self.Pochta_StatusHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Statuses">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_StatusHistory">
+              <PropertyRef Name="status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Users_Pochta_Employees">
+          <End Role="Pochta_Employees" Type="Self.Pochta_Employees" Multiplicity="1" />
+          <End Role="Pochta_Users" Type="Self.Pochta_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Employees">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Users">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Users_Pochta_Role">
+          <End Role="Pochta_Role" Type="Self.Pochta_Role" Multiplicity="1" />
+          <End Role="Pochta_Users" Type="Self.Pochta_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Role">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Users">
+              <PropertyRef Name="role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище user7_dbModelContainer">
+          <EntitySet Name="Pochta_Clients" EntityType="Self.Pochta_Clients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pochta_Dolzhonst" EntityType="Self.Pochta_Dolzhonst" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pochta_Employees" EntityType="Self.Pochta_Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pochta_Role" EntityType="Self.Pochta_Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pochta_Shipments" EntityType="Self.Pochta_Shipments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pochta_Statuses" EntityType="Self.Pochta_Statuses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pochta_StatusHistory" EntityType="Self.Pochta_StatusHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pochta_Tarrifs" EntityType="Self.Pochta_Tarrifs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pochta_Users" EntityType="Self.Pochta_Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Pochta_Employees_Pochta_Dolzhonst" Association="Self.FK_Pochta_Employees_Pochta_Dolzhonst">
+            <End Role="Pochta_Dolzhonst" EntitySet="Pochta_Dolzhonst" />
+            <End Role="Pochta_Employees" EntitySet="Pochta_Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Shipments_Pochta_Clients" Association="Self.FK_Pochta_Shipments_Pochta_Clients">
+            <End Role="Pochta_Clients" EntitySet="Pochta_Clients" />
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Shipments_Pochta_Clients1" Association="Self.FK_Pochta_Shipments_Pochta_Clients1">
+            <End Role="Pochta_Clients" EntitySet="Pochta_Clients" />
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Shipments_Pochta_Employees" Association="Self.FK_Pochta_Shipments_Pochta_Employees">
+            <End Role="Pochta_Employees" EntitySet="Pochta_Employees" />
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Shipments_Pochta_Statuses" Association="Self.FK_Pochta_Shipments_Pochta_Statuses">
+            <End Role="Pochta_Statuses" EntitySet="Pochta_Statuses" />
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Shipments_Pochta_Tarrifs" Association="Self.FK_Pochta_Shipments_Pochta_Tarrifs">
+            <End Role="Pochta_Tarrifs" EntitySet="Pochta_Tarrifs" />
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_StatusHistory_Pochta_Shipments" Association="Self.FK_Pochta_StatusHistory_Pochta_Shipments">
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+            <End Role="Pochta_StatusHistory" EntitySet="Pochta_StatusHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_StatusHistory_Pochta_Statuses" Association="Self.FK_Pochta_StatusHistory_Pochta_Statuses">
+            <End Role="Pochta_Statuses" EntitySet="Pochta_Statuses" />
+            <End Role="Pochta_StatusHistory" EntitySet="Pochta_StatusHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Users_Pochta_Employees" Association="Self.FK_Pochta_Users_Pochta_Employees">
+            <End Role="Pochta_Employees" EntitySet="Pochta_Employees" />
+            <End Role="Pochta_Users" EntitySet="Pochta_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Users_Pochta_Role" Association="Self.FK_Pochta_Users_Pochta_Role">
+            <End Role="Pochta_Role" EntitySet="Pochta_Role" />
+            <End Role="Pochta_Users" EntitySet="Pochta_Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="user7_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Pochta_Clients">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Pochta_Shipments" Relationship="Self.FK_Pochta_Shipments_Pochta_Clients" FromRole="Pochta_Clients" ToRole="Pochta_Shipments" />
+          <NavigationProperty Name="Pochta_Shipments1" Relationship="Self.FK_Pochta_Shipments_Pochta_Clients1" FromRole="Pochta_Clients" ToRole="Pochta_Shipments" />
+        </EntityType>
+        <EntityType Name="Pochta_Dolzhonst">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Pochta_Employees" Relationship="Self.FK_Pochta_Employees_Pochta_Dolzhonst" FromRole="Pochta_Dolzhonst" ToRole="Pochta_Employees" />
+        </EntityType>
+        <EntityType Name="Pochta_Employees">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dolzhnost" Type="Int32" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Pochta_Dolzhonst" Relationship="Self.FK_Pochta_Employees_Pochta_Dolzhonst" FromRole="Pochta_Employees" ToRole="Pochta_Dolzhonst" />
+          <NavigationProperty Name="Pochta_Shipments" Relationship="Self.FK_Pochta_Shipments_Pochta_Employees" FromRole="Pochta_Employees" ToRole="Pochta_Shipments" />
+          <NavigationProperty Name="Pochta_Users" Relationship="Self.FK_Pochta_Users_Pochta_Employees" FromRole="Pochta_Employees" ToRole="Pochta_Users" />
+        </EntityType>
+        <EntityType Name="Pochta_Role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Pochta_Users" Relationship="Self.FK_Pochta_Users_Pochta_Role" FromRole="Pochta_Role" ToRole="Pochta_Users" />
+        </EntityType>
+        <EntityType Name="Pochta_Shipments">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="track_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fact_weight" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sender" Type="Int32" Nullable="false" />
+          <Property Name="receiver" Type="Int32" Nullable="false" />
+          <Property Name="date_priema" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="tarif" Type="Int32" Nullable="false" />
+          <Property Name="cost" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="employee" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Pochta_Clients" Relationship="Self.FK_Pochta_Shipments_Pochta_Clients" FromRole="Pochta_Shipments" ToRole="Pochta_Clients" />
+          <NavigationProperty Name="Pochta_Clients1" Relationship="Self.FK_Pochta_Shipments_Pochta_Clients1" FromRole="Pochta_Shipments" ToRole="Pochta_Clients" />
+          <NavigationProperty Name="Pochta_Employees" Relationship="Self.FK_Pochta_Shipments_Pochta_Employees" FromRole="Pochta_Shipments" ToRole="Pochta_Employees" />
+          <NavigationProperty Name="Pochta_Statuses" Relationship="Self.FK_Pochta_Shipments_Pochta_Statuses" FromRole="Pochta_Shipments" ToRole="Pochta_Statuses" />
+          <NavigationProperty Name="Pochta_Tarrifs" Relationship="Self.FK_Pochta_Shipments_Pochta_Tarrifs" FromRole="Pochta_Shipments" ToRole="Pochta_Tarrifs" />
+          <NavigationProperty Name="Pochta_StatusHistory" Relationship="Self.FK_Pochta_StatusHistory_Pochta_Shipments" FromRole="Pochta_Shipments" ToRole="Pochta_StatusHistory" />
+        </EntityType>
+        <EntityType Name="Pochta_Statuses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Pochta_Shipments" Relationship="Self.FK_Pochta_Shipments_Pochta_Statuses" FromRole="Pochta_Statuses" ToRole="Pochta_Shipments" />
+          <NavigationProperty Name="Pochta_StatusHistory" Relationship="Self.FK_Pochta_StatusHistory_Pochta_Statuses" FromRole="Pochta_Statuses" ToRole="Pochta_StatusHistory" />
+        </EntityType>
+        <EntityType Name="Pochta_StatusHistory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="shipment" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="date_of_change" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Pochta_Shipments" Relationship="Self.FK_Pochta_StatusHistory_Pochta_Shipments" FromRole="Pochta_StatusHistory" ToRole="Pochta_Shipments" />
+          <NavigationProperty Name="Pochta_Statuses" Relationship="Self.FK_Pochta_StatusHistory_Pochta_Statuses" FromRole="Pochta_StatusHistory" ToRole="Pochta_Statuses" />
+        </EntityType>
+        <EntityType Name="Pochta_Tarrifs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="weight" Type="Int32" Nullable="false" />
+          <Property Name="cost" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Pochta_Shipments" Relationship="Self.FK_Pochta_Shipments_Pochta_Tarrifs" FromRole="Pochta_Tarrifs" ToRole="Pochta_Shipments" />
+        </EntityType>
+        <EntityType Name="Pochta_Users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="true" />
+          <Property Name="role" Type="Int32" Nullable="false" />
+          <Property Name="employee" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Pochta_Employees" Relationship="Self.FK_Pochta_Users_Pochta_Employees" FromRole="Pochta_Users" ToRole="Pochta_Employees" />
+          <NavigationProperty Name="Pochta_Role" Relationship="Self.FK_Pochta_Users_Pochta_Role" FromRole="Pochta_Users" ToRole="Pochta_Role" />
+        </EntityType>
+        <Association Name="FK_Pochta_Shipments_Pochta_Clients">
+          <End Role="Pochta_Clients" Type="Self.Pochta_Clients" Multiplicity="1" />
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Clients">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Shipments">
+              <PropertyRef Name="sender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Shipments_Pochta_Clients1">
+          <End Role="Pochta_Clients" Type="Self.Pochta_Clients" Multiplicity="1" />
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Clients">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Shipments">
+              <PropertyRef Name="receiver" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Employees_Pochta_Dolzhonst">
+          <End Role="Pochta_Dolzhonst" Type="Self.Pochta_Dolzhonst" Multiplicity="1" />
+          <End Role="Pochta_Employees" Type="Self.Pochta_Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Dolzhonst">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Employees">
+              <PropertyRef Name="dolzhnost" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Shipments_Pochta_Employees">
+          <End Role="Pochta_Employees" Type="Self.Pochta_Employees" Multiplicity="1" />
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Employees">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Shipments">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Users_Pochta_Employees">
+          <End Role="Pochta_Employees" Type="Self.Pochta_Employees" Multiplicity="1" />
+          <End Role="Pochta_Users" Type="Self.Pochta_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Employees">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Users">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Users_Pochta_Role">
+          <End Role="Pochta_Role" Type="Self.Pochta_Role" Multiplicity="1" />
+          <End Role="Pochta_Users" Type="Self.Pochta_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Role">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Users">
+              <PropertyRef Name="role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Shipments_Pochta_Statuses">
+          <End Role="Pochta_Statuses" Type="Self.Pochta_Statuses" Multiplicity="1" />
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Statuses">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Shipments">
+              <PropertyRef Name="status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_Shipments_Pochta_Tarrifs">
+          <End Role="Pochta_Tarrifs" Type="Self.Pochta_Tarrifs" Multiplicity="1" />
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Tarrifs">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_Shipments">
+              <PropertyRef Name="tarif" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_StatusHistory_Pochta_Shipments">
+          <End Role="Pochta_Shipments" Type="Self.Pochta_Shipments" Multiplicity="1" />
+          <End Role="Pochta_StatusHistory" Type="Self.Pochta_StatusHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Shipments">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_StatusHistory">
+              <PropertyRef Name="shipment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pochta_StatusHistory_Pochta_Statuses">
+          <End Role="Pochta_Statuses" Type="Self.Pochta_Statuses" Multiplicity="1" />
+          <End Role="Pochta_StatusHistory" Type="Self.Pochta_StatusHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pochta_Statuses">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Pochta_StatusHistory">
+              <PropertyRef Name="status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="user7_dbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pochta_Clients" EntityType="Self.Pochta_Clients" />
+          <EntitySet Name="Pochta_Dolzhonst" EntityType="Self.Pochta_Dolzhonst" />
+          <EntitySet Name="Pochta_Employees" EntityType="Self.Pochta_Employees" />
+          <EntitySet Name="Pochta_Role" EntityType="Self.Pochta_Role" />
+          <EntitySet Name="Pochta_Shipments" EntityType="Self.Pochta_Shipments" />
+          <EntitySet Name="Pochta_Statuses" EntityType="Self.Pochta_Statuses" />
+          <EntitySet Name="Pochta_StatusHistory" EntityType="Self.Pochta_StatusHistory" />
+          <EntitySet Name="Pochta_Tarrifs" EntityType="Self.Pochta_Tarrifs" />
+          <EntitySet Name="Pochta_Users" EntityType="Self.Pochta_Users" />
+          <AssociationSet Name="FK_Pochta_Shipments_Pochta_Clients" Association="Self.FK_Pochta_Shipments_Pochta_Clients">
+            <End Role="Pochta_Clients" EntitySet="Pochta_Clients" />
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Shipments_Pochta_Clients1" Association="Self.FK_Pochta_Shipments_Pochta_Clients1">
+            <End Role="Pochta_Clients" EntitySet="Pochta_Clients" />
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Employees_Pochta_Dolzhonst" Association="Self.FK_Pochta_Employees_Pochta_Dolzhonst">
+            <End Role="Pochta_Dolzhonst" EntitySet="Pochta_Dolzhonst" />
+            <End Role="Pochta_Employees" EntitySet="Pochta_Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Shipments_Pochta_Employees" Association="Self.FK_Pochta_Shipments_Pochta_Employees">
+            <End Role="Pochta_Employees" EntitySet="Pochta_Employees" />
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Users_Pochta_Employees" Association="Self.FK_Pochta_Users_Pochta_Employees">
+            <End Role="Pochta_Employees" EntitySet="Pochta_Employees" />
+            <End Role="Pochta_Users" EntitySet="Pochta_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Users_Pochta_Role" Association="Self.FK_Pochta_Users_Pochta_Role">
+            <End Role="Pochta_Role" EntitySet="Pochta_Role" />
+            <End Role="Pochta_Users" EntitySet="Pochta_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Shipments_Pochta_Statuses" Association="Self.FK_Pochta_Shipments_Pochta_Statuses">
+            <End Role="Pochta_Statuses" EntitySet="Pochta_Statuses" />
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_Shipments_Pochta_Tarrifs" Association="Self.FK_Pochta_Shipments_Pochta_Tarrifs">
+            <End Role="Pochta_Tarrifs" EntitySet="Pochta_Tarrifs" />
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_StatusHistory_Pochta_Shipments" Association="Self.FK_Pochta_StatusHistory_Pochta_Shipments">
+            <End Role="Pochta_Shipments" EntitySet="Pochta_Shipments" />
+            <End Role="Pochta_StatusHistory" EntitySet="Pochta_StatusHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pochta_StatusHistory_Pochta_Statuses" Association="Self.FK_Pochta_StatusHistory_Pochta_Statuses">
+            <End Role="Pochta_Statuses" EntitySet="Pochta_Statuses" />
+            <End Role="Pochta_StatusHistory" EntitySet="Pochta_StatusHistory" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище user7_dbModelContainer" CdmEntityContainer="user7_dbEntities1">
+          <EntitySetMapping Name="Pochta_Clients">
+            <EntityTypeMapping TypeName="user7_dbModel.Pochta_Clients">
+              <MappingFragment StoreEntitySet="Pochta_Clients">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pochta_Dolzhonst">
+            <EntityTypeMapping TypeName="user7_dbModel.Pochta_Dolzhonst">
+              <MappingFragment StoreEntitySet="Pochta_Dolzhonst">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pochta_Employees">
+            <EntityTypeMapping TypeName="user7_dbModel.Pochta_Employees">
+              <MappingFragment StoreEntitySet="Pochta_Employees">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+                <ScalarProperty Name="dolzhnost" ColumnName="dolzhnost" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pochta_Role">
+            <EntityTypeMapping TypeName="user7_dbModel.Pochta_Role">
+              <MappingFragment StoreEntitySet="Pochta_Role">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pochta_Shipments">
+            <EntityTypeMapping TypeName="user7_dbModel.Pochta_Shipments">
+              <MappingFragment StoreEntitySet="Pochta_Shipments">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="track_number" ColumnName="track_number" />
+                <ScalarProperty Name="tip" ColumnName="tip" />
+                <ScalarProperty Name="fact_weight" ColumnName="fact_weight" />
+                <ScalarProperty Name="sender" ColumnName="sender" />
+                <ScalarProperty Name="receiver" ColumnName="receiver" />
+                <ScalarProperty Name="date_priema" ColumnName="date_priema" />
+                <ScalarProperty Name="tarif" ColumnName="tarif" />
+                <ScalarProperty Name="cost" ColumnName="cost" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="employee" ColumnName="employee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pochta_Statuses">
+            <EntityTypeMapping TypeName="user7_dbModel.Pochta_Statuses">
+              <MappingFragment StoreEntitySet="Pochta_Statuses">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pochta_StatusHistory">
+            <EntityTypeMapping TypeName="user7_dbModel.Pochta_StatusHistory">
+              <MappingFragment StoreEntitySet="Pochta_StatusHistory">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="shipment" ColumnName="shipment" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="date_of_change" ColumnName="date_of_change" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pochta_Tarrifs">
+            <EntityTypeMapping TypeName="user7_dbModel.Pochta_Tarrifs">
+              <MappingFragment StoreEntitySet="Pochta_Tarrifs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tip" ColumnName="tip" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="cost" ColumnName="cost" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pochta_Users">
+            <EntityTypeMapping TypeName="user7_dbModel.Pochta_Users">
+              <MappingFragment StoreEntitySet="Pochta_Users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="employee" ColumnName="employee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

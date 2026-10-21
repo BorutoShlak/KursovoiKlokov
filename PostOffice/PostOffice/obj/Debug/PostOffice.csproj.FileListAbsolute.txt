@@ -1,0 +1,122 @@
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\PostOffice.exe.config
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\PostOffice.exe
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\PostOffice.pdb
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\BCrypt-Net-Next.dll
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\EntityFramework.dll
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\System.Buffers.dll
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\System.Memory.dll
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\EntityFramework.xml
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\System.Buffers.xml
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\System.Memory.xml
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.AssemblyReference.cache
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\AdminWindow.g.cs
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\EmployeeWindow.g.cs
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\MainWindow.g.cs
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\App.g.cs
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice_Content.g.cs
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice_MarkupCompile.cache
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice_MarkupCompile.lref
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\AdminWindow.baml
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\EmployeeWindow.baml
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\MainWindow.baml
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.g.resources
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.Properties.Resources.resources
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.GenerateResource.cache
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.CoreCompileInputs.cache
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.Up2Date
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.exe
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.pdb
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.exe.config
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\ShipmentPage.g.cs
+C:\Users\lolkl\OneDrive\Desktop\шарага\4 курч\курсач\PostOffice\PostOffice\obj\Debug\ShipmentPage.baml
+F:\курсач\PostOffice\PostOffice\bin\Debug\PostOffice.exe.config
+F:\курсач\PostOffice\PostOffice\bin\Debug\PostOffice.exe
+F:\курсач\PostOffice\PostOffice\bin\Debug\PostOffice.pdb
+F:\курсач\PostOffice\PostOffice\bin\Debug\BCrypt-Net-Next.dll
+F:\курсач\PostOffice\PostOffice\bin\Debug\EntityFramework.dll
+F:\курсач\PostOffice\PostOffice\bin\Debug\System.Buffers.dll
+F:\курсач\PostOffice\PostOffice\bin\Debug\System.Memory.dll
+F:\курсач\PostOffice\PostOffice\bin\Debug\System.Numerics.Vectors.dll
+F:\курсач\PostOffice\PostOffice\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\курсач\PostOffice\PostOffice\bin\Debug\EntityFramework.xml
+F:\курсач\PostOffice\PostOffice\bin\Debug\System.Buffers.xml
+F:\курсач\PostOffice\PostOffice\bin\Debug\System.Memory.xml
+F:\курсач\PostOffice\PostOffice\bin\Debug\System.Numerics.Vectors.xml
+F:\курсач\PostOffice\PostOffice\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\курсач\PostOffice\PostOffice\bin\Debug\ru\EntityFramework.resources.dll
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.AssemblyReference.cache
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.exe.config
+F:\курсач\PostOffice\PostOffice\obj\Debug\AdminWindow.g.cs
+F:\курсач\PostOffice\PostOffice\obj\Debug\EmployeeWindow.g.cs
+F:\курсач\PostOffice\PostOffice\obj\Debug\MainWindow.g.cs
+F:\курсач\PostOffice\PostOffice\obj\Debug\SearchShipmentPage.g.cs
+F:\курсач\PostOffice\PostOffice\obj\Debug\ShipmentPage.g.cs
+F:\курсач\PostOffice\PostOffice\obj\Debug\App.g.cs
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice_Content.g.cs
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice_MarkupCompile.cache
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice_MarkupCompile.lref
+F:\курсач\PostOffice\PostOffice\obj\Debug\AdminWindow.baml
+F:\курсач\PostOffice\PostOffice\obj\Debug\EmployeeWindow.baml
+F:\курсач\PostOffice\PostOffice\obj\Debug\MainWindow.baml
+F:\курсач\PostOffice\PostOffice\obj\Debug\ShipmentPage.baml
+F:\курсач\PostOffice\PostOffice\obj\Debug\SearchShipmentPage.baml
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.g.resources
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.Properties.Resources.resources
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.GenerateResource.cache
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.CoreCompileInputs.cache
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.Up2Date
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.exe
+F:\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.pdb
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\PostOffice.exe.config
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\PostOffice.exe
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\PostOffice.pdb
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\BCrypt-Net-Next.dll
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\EntityFramework.dll
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\System.Buffers.dll
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\System.Memory.dll
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\EntityFramework.xml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\System.Buffers.xml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\System.Memory.xml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.AssemblyReference.cache
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.exe.config
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\AdminWindow.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\EmployeeWindow.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\MainWindow.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\SearchShipmentPage.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\ShipmentPage.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\App.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice_Content.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice_MarkupCompile.cache
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice_MarkupCompile.lref
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\AdminWindow.baml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\EmployeeWindow.baml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\MainWindow.baml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\SearchShipmentPage.baml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\ShipmentPage.baml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.g.resources
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.Properties.Resources.resources
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.GenerateResource.cache
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.CoreCompileInputs.cache
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.csproj.Up2Date
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.exe
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\PostOffice.pdb
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\AddClientWindow.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\AddClientWindow.baml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\ShowTarrifsPage.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\ShowTarrifsPage.baml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\EmployeesManagementPage.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\EmployeesManagementPage.baml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\TariffsManagementPage.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\TariffsManagementPage.baml
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\ClientsManagementPage.g.cs
+C:\Users\lolkl\OneDrive\Desktop\курсач\PostOffice\PostOffice\obj\Debug\ClientsManagementPage.baml
