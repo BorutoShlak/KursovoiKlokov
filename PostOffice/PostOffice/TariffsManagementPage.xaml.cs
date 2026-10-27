@@ -37,6 +37,7 @@ namespace PostOffice
         {
             try
             {
+                tariffsdg.ItemsSource = null;
                 var tariffs = App.con.Pochta_Tarrifs.ToList();
 
                 tariffsdg.ItemsSource = tariffs;
