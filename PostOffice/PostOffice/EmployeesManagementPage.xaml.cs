@@ -23,6 +23,7 @@ namespace PostOffice
         {
             try
             {
+                employeesdg.ItemsSource = null;
                 var employees = App.con.Pochta_Employees.Include(u => u.Pochta_Dolzhonst).Include(u => u.Pochta_Users).ToList();
 
                 employeesdg.ItemsSource = employees;
