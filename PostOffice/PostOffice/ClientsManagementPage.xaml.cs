@@ -26,6 +26,7 @@ namespace PostOffice
         {
             try
             {
+                usersdg.ItemsSource = null;
                 var clients = App.con.Pochta_Clients.ToList();
                 usersdg.ItemsSource = clients;
             }
